@@ -8,7 +8,6 @@ function App() {
       <Navbar />
       <About />
       <Projects />
-      <Contact />
     </div>
   );
 }
