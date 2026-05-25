@@ -1,21 +1,45 @@
+import "./Projects.css";
+
 const projects = [
-  { title: "Portfolio Website", description: "My personal website built with React.", link: "#" },
-  { title: "Weather App", description: "A weather forecasting app using OpenWeather API.", link: "#" }
+  {
+    title: "Learn Bulgarian",
+    description:
+      "An interactive website for learning the Bulgarian language — vocabulary, grammar, and more.",
+    link: "https://learnbulgarian.diyana.uk/",
+    tag: "Live site",
+  },
+  {
+    title: "Personal Website",
+    description:
+      "This portfolio site, built with React. A place to showcase my work and share what I'm up to.",
+    link: "#",
+    tag: "React",
+  },
 ];
 
 function Projects() {
   return (
-    <section id="projects" style={{ padding: "20px", textAlign: "center" }}>
-      <h2>My Projects</h2>
-      <ul style={{ listStyle: "none", padding: 0 }}>
-        {projects.map((project, index) => (
-          <li key={index} style={{ marginBottom: "15px" }}>
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-            <a href={project.link} target="_blank" rel="noopener noreferrer">View Project</a>
-          </li>
-        ))}
-      </ul>
+    <section id="projects" className="projects-section">
+      <div className="projects-inner">
+        <h2 className="section-title">Projects</h2>
+        <p className="section-subtitle">Things I've built</p>
+        <div className="projects-grid">
+          {projects.map((project, index) => (
+            <a
+              key={index}
+              href={project.link}
+              target={project.link.startsWith("http") ? "_blank" : "_self"}
+              rel="noopener noreferrer"
+              className="project-card"
+            >
+              <span className="project-tag">{project.tag}</span>
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+              <span className="project-arrow">→</span>
+            </a>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

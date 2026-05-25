@@ -1,11 +1,71 @@
-function Navbar() {
+import { useState } from 'react';
+import './NavBar.css';
+
+export default function Navbar({ page, onNavigate }) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const close = () => setMenuOpen(false);
+
+  const goHome = (anchor) => {
+    close();
+    if (page !== 'home') {
+      onNavigate('home');
+      // anchor scroll happens after re-render via href
+    }
+  };
+
   return (
-    <nav style={{ padding: "10px", background: "#333", color: "#fff", textAlign: "center" }}>
-      <a href="#about" style={{ color: "#fff", margin: "10px" }}>About</a>
-      <a href="#projects" style={{ color: "#fff", margin: "10px" }}>Projects</a>
-      <a href="#contact" style={{ color: "#fff", margin: "10px" }}>Contact</a>
+    <nav className="navbar">
+      <button
+        className="navbar-brand"
+        onClick={() => { onNavigate('home'); close(); }}
+        style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
+      >
+        Diyana
+      </button>
+
+      <button
+        className="navbar-toggle"
+        onClick={() => setMenuOpen(o => !o)}
+        aria-label="Toggle menu"
+      >
+        <span /><span /><span />
+      </button>
+
+      <ul className={`navbar-links${menuOpen ? ' open' : ''}`}>
+        <li>
+          <a href={page === 'home' ? '#about' : '#'}
+            onClick={() => goHome('#about')}>About</a>
+        </li>
+        <li>
+          <a href={page === 'home' ? '#projects' : '#'}
+            onClick={() => goHome('#projects')}>Projects</a>
+        </li>
+        <li>
+          <button
+            className="nav-link-btn"
+            onClick={() => { onNavigate('games'); close(); }}
+            style={{ color: page === 'games' ? '#fff' : undefined }}
+          >
+            Games
+          </button>
+        </li>
+        <li>
+          <a href={page === 'home' ? '#contact' : '#'}
+            onClick={() => goHome('#contact')}>Contact</a>
+        </li>
+        <li>
+          <a
+            href="https://learnbulgarian.diyana.uk/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-highlight"
+            onClick={close}
+          >
+            Learn Bulgarian
+          </a>
+        </li>
+      </ul>
     </nav>
   );
 }
-
-export default Navbar;

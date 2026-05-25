@@ -1,0 +1,61 @@
+.games-section {
+  background: #0a0a0a;
+  padding: 6rem 2rem;
+  border-top: 1px solid #1e1e1e;
+}
+
+.games-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.games-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.games-preview-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  background: #141414;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 1.8rem 1.5rem;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.15s;
+}
+.games-preview-card:hover {
+  border-color: #7c6af7;
+  transform: translateY(-3px);
+}
+
+.games-preview-emoji {
+  font-size: 2rem;
+}
+
+.games-preview-card h3 {
+  color: #fff;
+  margin: 0 0 0.3rem;
+  font-size: 1.1rem;
+}
+
+.games-preview-card p {
+  color: #888;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.games-preview-cta {
+  color: #7c6af7;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: auto;
+  transition: transform 0.15s;
+}
+.games-preview-card:hover .games-preview-cta {
+  transform: translateX(4px);
+}
