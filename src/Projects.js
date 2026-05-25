@@ -1,6 +1,6 @@
 const projects = [
   { title: "Portfolio Website", description: "My personal website built with React.", link: "#" },
-  { title: "Weather App", description: "A weather forecasting app using OpenWeather API.", link: "#" }
+  { title: "Weather App", description: "Airplane data analysis using a Jupyther notebook.", link: "#" }
 ];
 
 function Projects() {

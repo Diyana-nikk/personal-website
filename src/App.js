@@ -5,9 +5,7 @@ import Projects from "./Projects";
 function App() {
   return (
     <div>
-      <Navbar />
-      <About />
-      <Projects />
+      <h1>Hello, React!</h1>
     </div>
   );
 }

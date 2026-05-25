@@ -1,0 +1,71 @@
+.menu-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Hamburger icon */
+  .hamburger {
+    width: 30px;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.3s;
+  }
+  
+  .hamburger span {
+    height: 4px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hover effect */
+  .hamburger:hover span {
+    background-color: #007bff;
+    transform: scaleX(1.1);
+  }
+  
+  /* Transform to 'X' when open */
+  .hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  /* Dropdown menu */
+  .menu-dropdown {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 150px;
+    z-index: 100;
+  }
+  
+  .menu-dropdown ul {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+  }
+  
+  .menu-dropdown li {
+    padding: 10px 16px;
+    cursor: pointer;
+  }
+  
+  .menu-dropdown li:hover {
+    background-color: #f0f0f0;
+  }
+  
