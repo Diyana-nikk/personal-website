@@ -1,0 +1,523 @@
+/* ── Root ──────────────────────────────────────────────────────────────────── */
+
+.belot-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #1a2e1a;
+  color: #fff;
+  font-family: inherit;
+  user-select: none;
+}
+
+/* ── Header ────────────────────────────────────────────────────────────────── */
+
+.belot-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+  background: #0f1f0f;
+  border-bottom: 1px solid #2a3f2a;
+}
+
+.belot-back-btn {
+  background: none;
+  border: 1px solid #4a6a4a;
+  color: #9db89d;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: border-color 0.2s, color 0.2s;
+}
+.belot-back-btn:hover { border-color: #7c6af7; color: #7c6af7; }
+
+.belot-title {
+  font-size: 1.4rem;
+  margin: 0;
+  color: #d4c97a;
+  letter-spacing: 0.1em;
+}
+
+.belot-scores { display: flex; gap: 0.8rem; }
+
+.score-chip {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.score-us   { background: #2d4a2d; color: #7ec87e; }
+.score-them { background: #4a2d2d; color: #c87e7e; }
+
+/* ── Trump bar ─────────────────────────────────────────────────────────────── */
+
+.belot-trump-bar {
+  text-align: center;
+  padding: 0.4rem;
+  background: #152615;
+  font-size: 0.9rem;
+  color: #bbb;
+  border-bottom: 1px solid #2a3f2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.belot-trump-bar strong {
+  color: var(--tc);
+  font-size: 1.2rem;
+}
+.belote-tag {
+  background: #d4a017;
+  color: #000;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 10px;
+}
+
+/* ── Table layout ──────────────────────────────────────────────────────────── */
+
+.belot-table {
+  display: grid;
+  grid-template-areas:
+    ". top ."
+    "left center right"
+    ". . .";
+  grid-template-columns: 110px 1fr 110px;
+  grid-template-rows: auto 1fr;
+  flex: 1;
+  gap: 0.5rem;
+  padding: 1rem;
+  min-height: 420px;
+}
+
+/* ── Seat labels ───────────────────────────────────────────────────────────── */
+
+.belot-seat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.seat-label {
+  font-size: 0.7rem;
+  color: #6a8a6a;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.belot-top    { grid-area: top;    }
+.belot-left   { grid-area: left;   justify-content: center; }
+.belot-right  { grid-area: right;  justify-content: center; }
+
+/* ── Hands ─────────────────────────────────────────────────────────────────── */
+
+.hand-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+}
+
+.hand-col {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: center;
+}
+
+/* ── Center ─────────────────────────────────────────────────────────────────── */
+
+.belot-center {
+  grid-area: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* ── Trick area ────────────────────────────────────────────────────────────── */
+
+.trick-area {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 120px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  max-width: 480px;
+  flex-wrap: wrap;
+}
+
+.trick-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.trick-player-label {
+  font-size: 0.65rem;
+  color: #6a8a6a;
+  text-transform: uppercase;
+}
+
+.trick-empty {
+  color: #3a5a3a;
+  font-size: 0.85rem;
+  align-self: center;
+}
+
+/* ── Cards ─────────────────────────────────────────────────────────────────── */
+
+.bcard {
+  width: 56px;
+  height: 80px;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--card-color, #1a1a2e);
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: transform 0.12s;
+}
+
+.bcard-small {
+  width: 36px;
+  height: 52px;
+  font-size: 0.7rem;
+}
+
+.bcard-back {
+  background: repeating-linear-gradient(
+    45deg,
+    #1a4a1a,
+    #1a4a1a 4px,
+    #0f2e0f 4px,
+    #0f2e0f 8px
+  );
+  border: 2px solid #2a5a2a;
+}
+
+.bcard-clickable {
+  cursor: pointer;
+  border: 2px solid #7c6af7;
+  transform: translateY(-6px);
+}
+.bcard-clickable:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 16px rgba(124, 106, 247, 0.5);
+}
+
+.bcard-rank {
+  font-size: 1rem;
+  line-height: 1;
+}
+.bcard-small .bcard-rank { font-size: 0.75rem; }
+
+.bcard-suit {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+.bcard-small .bcard-suit { font-size: 0.8rem; }
+
+/* ── Human hand ────────────────────────────────────────────────────────────── */
+
+.belot-hand-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1rem 1.5rem;
+  background: #0f1f0f;
+  border-top: 1px solid #2a3f2a;
+}
+
+.hand-row-main {
+  gap: 8px;
+}
+
+/* ── Bidding ───────────────────────────────────────────────────────────────── */
+
+.bid-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.bid-prompt {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+.bid-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.bid-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid var(--sc, #7c6af7);
+  background: rgba(0,0,0,0.3);
+  color: var(--sc, #7c6af7);
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+.bid-btn:hover:not(.bid-btn-disabled) {
+  background: var(--sc, #7c6af7);
+  color: #fff;
+  transform: scale(1.1);
+}
+.bid-btn-disabled { opacity: 0.3; cursor: not-allowed; }
+
+.bid-pass {
+  --sc: #888;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #888;
+  border-color: #555;
+}
+.bid-pass:hover {
+  background: #555 !important;
+  color: #fff !important;
+}
+
+.bid-waiting {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6a8a6a;
+  font-size: 0.9rem;
+}
+
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #4a6a4a;
+  border-top-color: #7ec87e;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Message ───────────────────────────────────────────────────────────────── */
+
+.belot-message {
+  font-size: 0.85rem;
+  color: #9ab89a;
+  text-align: center;
+  margin: 0;
+  max-width: 340px;
+}
+
+/* ── Round/Game end ────────────────────────────────────────────────────────── */
+
+.round-end-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  background: rgba(0,0,0,0.4);
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+}
+
+.round-scores {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.belot-btn {
+  background: #7c6af7;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+.belot-btn:hover { opacity: 0.85; }
+
+.game-over-msg {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0;
+  color: #d4c97a;
+}
+
+/* ── Bid history ───────────────────────────────────────────────────────────── */
+
+.bid-history {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+  max-width: 380px;
+}
+
+.bid-hist-entry {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.bid-hist-bid  { background: #2a3f6a; color: #a0c0ff; }
+.bid-hist-pass { background: #2e2e2e; color: #666; }
+
+/* ── Bid waiting text ──────────────────────────────────────────────────────── */
+
+.bid-waiting-txt {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: #6a8a6a;
+}
+
+/* ── No valid bids notice ──────────────────────────────────────────────────── */
+
+.bid-no-valid {
+  font-size: 0.75rem;
+  color: #888;
+  margin: 0;
+}
+
+/* ── Hand card wrapper (drag-and-drop) ─────────────────────────────────────── */
+
+.hand-card-wrap {
+  cursor: grab;
+  transition: transform 0.1s;
+}
+
+.hand-card-wrap:active { cursor: grabbing; }
+
+.hand-card-wrap.drag-over {
+  transform: translateX(10px);
+}
+
+.hand-card-wrap.drag-over .bcard {
+  box-shadow: 0 0 0 2px #d4c97a;
+}
+
+/* ── Contra ────────────────────────────────────────────────────────────────── */
+
+.contra-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(180, 60, 60, 0.15);
+  border: 1px solid #8b3030;
+  border-radius: 10px;
+  padding: 0.8rem 1.2rem;
+}
+
+.contra-tag {
+  background: #8b2020;
+  color: #ffaaaa;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.15rem 0.55rem;
+  border-radius: 10px;
+}
+
+.reContra-tag {
+  background: #5a0070;
+  color: #e0aaff;
+}
+
+.contra-btn {
+  background: #8b2020;
+}
+.contra-btn:hover { background: #a02525 !important; opacity: 1; }
+
+/* ── Declarations ──────────────────────────────────────────────────────────── */
+
+.decl-summary {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.decl-chip {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 10px;
+}
+
+.decl-us   { background: #2d4a2d; color: #7ec87e; }
+.decl-them { background: #4a2d2d; color: #c87e7e; }
+
+/* ── Bid text buttons (NT / AT) ────────────────────────────────────────────── */
+
+.bid-btn-text {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #d4c97a;
+  border-color: #d4c97a;
+}
+.bid-btn-text:hover:not(.bid-btn-disabled) {
+  background: #d4c97a !important;
+  color: #000 !important;
+}
+
+/* ── Hand declaration note ─────────────────────────────────────────────────── */
+
+.hand-decl-note {
+  font-size: 0.75rem;
+  color: #d4c97a;
+}
+
+/* ── Card highlight ────────────────────────────────────────────────────────── */
+
+.bcard-highlight {
+  border: 2px solid #d4c97a;
+}
+
+/* ── Result label ──────────────────────────────────────────────────────────── */
+
+.result-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #d4c97a;
+  margin: 0;
+  text-align: center;
+}
+
+/* ── Responsive ────────────────────────────────────────────────────────────── */
+
+@media (max-width: 560px) {
+  .belot-table {
+    grid-template-columns: 70px 1fr 70px;
+  }
+  .bcard { width: 44px; height: 64px; }
+  .bcard-rank { font-size: 0.85rem; }
+  .bcard-suit { font-size: 0.9rem; }
+  .trick-area { padding: 0.6rem; gap: 8px; }
+}

@@ -1,13 +1,31 @@
-import Navbar from "./NavBar";
-import About from "./About";
-import Projects from "./Projects";
+import { useState } from 'react';
+import Navbar from './NavBar';
+import About from './About';
+import Projects from './Projects';
+import GamesSection from './GamesSection';
+import Contact from './Contact';
+import GamesHub from './GamesHub';
+import './App.css';
 
-function App() {
+export default function App() {
+  const [page, setPage] = useState('home');
+
+  if (page === 'games') {
+    return (
+      <>
+        <Navbar page={page} onNavigate={setPage} />
+        <GamesHub onBack={() => setPage('home')} />
+      </>
+    );
+  }
+
   return (
-    <div>
-      <h1>Hello, React!</h1>
-    </div>
+    <>
+      <Navbar page={page} onNavigate={setPage} />
+      <About />
+      <Projects />
+      <GamesSection onNavigate={() => setPage('games')} />
+      <Contact />
+    </>
   );
 }
-
-export default App;
