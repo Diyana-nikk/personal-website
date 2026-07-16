@@ -1,0 +1,62 @@
+.board-games-section {
+  background: #0a0a0a;
+  padding: 6rem 2rem;
+  border-top: 1px solid #1e1e1e;
+}
+
+.board-games-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.board-games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.board-game-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: #141414;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 1.6rem 1.5rem;
+  transition: border-color 0.2s, transform 0.15s;
+}
+
+.board-game-card:hover {
+  border-color: #7c6af7;
+  transform: translateY(-3px);
+}
+
+.board-game-emoji {
+  font-size: 2rem;
+}
+
+.board-game-card h3 {
+  color: #fff;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.board-game-meta {
+  color: #666;
+  font-size: 0.82rem;
+  margin: 0;
+}
+
+.board-game-stars {
+  color: #f5c518;
+  font-size: 0.95rem;
+  letter-spacing: 0.1em;
+}
+
+.board-game-review {
+  color: #999;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0.2rem 0 0;
+}

@@ -32,6 +32,15 @@
   transform: translateY(-3px);
 }
 
+.games-preview-card-disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+.games-preview-card-disabled:hover {
+  border-color: #2a2a2a;
+  transform: none;
+}
+
 .games-preview-emoji {
   font-size: 2rem;
 }

@@ -41,12 +41,16 @@ export default function Navbar({ page, onNavigate }) {
             onClick={() => goHome('#projects')}>Projects</a>
         </li>
         <li>
+          <a href={page === 'home' ? '#board-games' : '#'}
+            onClick={() => goHome('#board-games')}>Board Games</a>
+        </li>
+        <li>
           <button
             className="nav-link-btn"
             onClick={() => { onNavigate('games'); close(); }}
             style={{ color: page === 'games' ? '#fff' : undefined }}
           >
-            Games
+            Online Games
           </button>
         </li>
         <li>

@@ -1,21 +1,22 @@
 import { useState } from 'react';
-import BelotGame from './games/BelotGame';
+// Belot temporarily disabled — coming soon. Not deleted, just commented out.
+// import BelotGame from './games/BelotGame';
 import './GamesHub.css';
 
 const GAME_LIST = [
-  {
-    id: 'belot',
-    title: 'Belot',
-    emoji: '🃏',
-    description: 'The classic Bulgarian card game. Bid for trump, form a team with your partner, and outscore your opponents.',
-    players: '4 players (2v2)',
-    difficulty: 'Medium',
-  },
+  // {
+  //   id: 'belot',
+  //   title: 'Belot',
+  //   emoji: '🃏',
+  //   description: 'The classic Bulgarian card game. Bid for trump, form a team with your partner, and outscore your opponents.',
+  //   players: '4 players (2v2)',
+  //   difficulty: 'Medium',
+  // },
   {
     id: 'coming',
-    title: 'More coming soon…',
+    title: 'Coming soon…',
     emoji: '🎮',
-    description: 'More games are on the way. Check back later!',
+    description: 'Online games are on the way. Check back later!',
     players: '—',
     difficulty: '—',
     disabled: true,
@@ -23,17 +24,17 @@ const GAME_LIST = [
 ];
 
 export default function GamesHub({ onBack }) {
-  const [activeGame, setActiveGame] = useState(null);
+  const [, setActiveGame] = useState(null);
 
-  if (activeGame === 'belot') {
-    return <BelotGame onBack={() => setActiveGame(null)} />;
-  }
+  // if (activeGame === 'belot') {
+  //   return <BelotGame onBack={() => setActiveGame(null)} />;
+  // }
 
   return (
     <div className="hub-root">
       <div className="hub-header">
         <button className="hub-back-btn" onClick={onBack}>← Back to site</button>
-        <h1 className="hub-title">Games</h1>
+        <h1 className="hub-title">Online Games</h1>
         <p className="hub-subtitle">Play directly in your browser — no download needed.</p>
       </div>
 

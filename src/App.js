@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Navbar from './NavBar';
 import About from './About';
 import Projects from './Projects';
+import BoardGames from './BoardGames';
 import GamesSection from './GamesSection';
 import Contact from './Contact';
 import GamesHub from './GamesHub';
@@ -24,6 +25,7 @@ export default function App() {
       <Navbar page={page} onNavigate={setPage} />
       <About />
       <Projects />
+      <BoardGames />
       <GamesSection onNavigate={() => setPage('games')} />
       <Contact />
     </>

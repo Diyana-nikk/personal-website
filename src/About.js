@@ -10,8 +10,7 @@ function About() {
           <p className="about-tagline">Developer · Language Enthusiast · Builder of Things</p>
           <p className="about-body">
             I love creating projects that combine technology with real-world utility.
-            When I'm not coding, you'll find me working on language learning tools —
-            including my very own site for learning Bulgarian!
+            When I'm not coding, you'll find me playing board games!
           </p>
           <div className="about-links">
             <a href="#projects" className="btn-primary">See my work</a>
