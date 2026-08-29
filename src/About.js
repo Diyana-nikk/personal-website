@@ -1,13 +1,16 @@
 import "./About.css";
+import logo from "./images/logo-dark.png";
 
 function About() {
   return (
     <section id="about" className="about-section">
       <div className="about-inner">
-        <div className="about-avatar">D</div>
+        <div className="about-avatar">
+          <img src={logo} alt="D" className="about-avatar-logo" />
+        </div>
         <div className="about-text">
-          <h1>Hi, I'm <span className="highlight">Diyana</span> 👋</h1>
-          <p className="about-tagline">Developer · Language Enthusiast · Builder of Things</p>
+          <h1>Hi, I'm <span className="highlight">Diyana</span></h1>
+          <p className="about-tagline">Developer · Dog lover · Hobby enthusiast</p>
           <p className="about-body">
             I love creating projects that combine technology with real-world utility.
             When I'm not coding, you'll find me playing board games!

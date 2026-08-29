@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './NavBar.css';
+import logo from './images/logo-light.png';
 
 export default function Navbar({ page, onNavigate }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -20,7 +21,7 @@ export default function Navbar({ page, onNavigate }) {
         onClick={() => { onNavigate('home'); close(); }}
         style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
       >
-        Diyana
+        <img src={logo} alt="Diyana" className="navbar-logo" />
       </button>
 
       <button

@@ -32,20 +32,18 @@
   transform: translateY(-3px);
 }
 
-.board-game-emoji {
-  font-size: 2rem;
+.board-game-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  margin: -0.2rem auto 0.3rem;
 }
 
 .board-game-card h3 {
   color: #fff;
   margin: 0;
   font-size: 1.1rem;
-}
-
-.board-game-meta {
-  color: #666;
-  font-size: 0.82rem;
-  margin: 0;
 }
 
 .board-game-stars {
@@ -59,4 +57,5 @@
   font-size: 0.9rem;
   line-height: 1.6;
   margin: 0.2rem 0 0;
+  white-space: pre-line;
 }

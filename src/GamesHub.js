@@ -15,7 +15,6 @@ const GAME_LIST = [
   {
     id: 'coming',
     title: 'Coming soon…',
-    emoji: '🎮',
     description: 'Online games are on the way. Check back later!',
     players: '—',
     difficulty: '—',
@@ -45,7 +44,6 @@ export default function GamesHub({ onBack }) {
             className={`hub-card${game.disabled ? ' hub-card-disabled' : ''}`}
             onClick={() => !game.disabled && setActiveGame(game.id)}
           >
-            <span className="hub-emoji">{game.emoji}</span>
             <h3 className="hub-card-title">{game.title}</h3>
             <p className="hub-card-desc">{game.description}</p>
             <div className="hub-card-meta">

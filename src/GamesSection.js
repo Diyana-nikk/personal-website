@@ -18,7 +18,6 @@ export default function GamesSection({ onNavigate }) {
           </div>
           */}
           <div className="games-preview-card games-preview-card-disabled">
-            <span className="games-preview-emoji">🎮</span>
             <div>
               <h3>Coming Soon</h3>
               <p>Online games are on the way — check back soon!</p>

@@ -565,7 +565,7 @@ export default function BelotGame({ onBack }) {
           {game.phase === 'gameOver' && (
             <div className="round-end-panel">
               <p className="game-over-msg">
-                {game.gameWinner === 0 ? '🏆 Your team wins!' : '💀 Opponents win!'}
+                {game.gameWinner === 0 ? 'Your team wins!' : 'Opponents win!'}
               </p>
               <div className="round-scores">
                 <span>Us: {game.teamScores[0]}</span>

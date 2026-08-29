@@ -24,9 +24,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
-  font-weight: 700;
-  color: #fff;
+  overflow: hidden;
+}
+
+.about-avatar-logo {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  transform: rotate(90deg);
 }
 
 .about-text h1 {
