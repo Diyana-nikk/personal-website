@@ -1,16 +1,7 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:www.accenture.com)",
-      "WebSearch",
-      "WebFetch(domain:www.omio.co.uk)",
-      "WebFetch(domain:www.vrr.de)",
-      "WebFetch(domain:www.skyscanner.net)",
-      "Bash(python -c \"import weasyprint\")",
-      "Bash(python -c \"import reportlab; print\\('reportlab ok'\\)\")",
-      "Bash(where wkhtmltopdf *)",
-      "Read(//c/Users/xdiya/AppData/Local/Temp/claude/C--Users-xdiya-projects-personal-website/2a2839aa-185e-46f4-9427-62d2fef8f580/scratchpad/**)",
-      "Bash(python build_pdf.py)"
+      "WebFetch(domain:www.accenture.com)"
     ]
   }
 }
