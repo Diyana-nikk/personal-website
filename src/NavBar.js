@@ -34,16 +34,13 @@ export default function Navbar({ page, onNavigate }) {
 
       <ul className={`navbar-links${menuOpen ? ' open' : ''}`}>
         <li>
-          <a href={page === 'home' ? '#about' : '#'}
-            onClick={() => goHome('#about')}>About</a>
+          <a href="#about" onClick={goHome}>About</a>
         </li>
         <li>
-          <a href={page === 'home' ? '#projects' : '#'}
-            onClick={() => goHome('#projects')}>Projects</a>
+          <a href="#projects" onClick={goHome}>Projects</a>
         </li>
         <li>
-          <a href={page === 'home' ? '#board-games' : '#'}
-            onClick={() => goHome('#board-games')}>Board Games</a>
+          <a href="#board-games" onClick={goHome}>Board Games</a>
         </li>
         <li>
           <button
@@ -55,8 +52,7 @@ export default function Navbar({ page, onNavigate }) {
           </button>
         </li>
         <li>
-          <a href={page === 'home' ? '#contact' : '#'}
-            onClick={() => goHome('#contact')}>Contact</a>
+          <a href="#contact" onClick={goHome}>Contact</a>
         </li>
         <li>
           <a
